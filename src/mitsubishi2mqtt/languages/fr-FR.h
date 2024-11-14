@@ -1,6 +1,6 @@
 /*
   mitsubishi2mqtt - Mitsubishi Heat Pump to MQTT control for Home Assistant.
-  Copyright (c) 2019 gysmo38, dzungpv, shampeon, endeavour, jascdk, chrdavis, alekslyse.  All right reserved.
+  Copyright (c) 2022 gysmo38, dzungpv, shampeon, endeavour, jascdk, chrdavis, alekslyse.  All right reserved.
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
@@ -38,17 +38,17 @@ const char txt_login[] PROGMEM = "Entrer";
 
 //Form choices
 const char txt_f_on[] PROGMEM = "Activé";
-const char txt_f_off[] PROGMEM = "Déactivé";
+const char txt_f_off[] PROGMEM = "Désactivé";
 const char txt_f_auto[] PROGMEM = "AUTO";
 const char txt_f_heat[] PROGMEM = "CHAUD";
 const char txt_f_dry[] PROGMEM = "SEC";
 const char txt_f_cool[] PROGMEM = "FROID";
 const char txt_f_fan[] PROGMEM = "VENTILLATION";
-const char txt_f_quiet[] PROGMEM = "SILIENCIEUX";
+const char txt_f_quiet[] PROGMEM = "SILENCIEUX";
 const char txt_f_speed[] PROGMEM = "VITESSE";
 const char txt_f_swing[] PROGMEM = "MOUVEMENT";
 const char txt_f_pos[] PROGMEM = "POSITION";
-const char txt_f_celsius[] PROGMEM = "Celsuse";
+const char txt_f_celsius[] PROGMEM = "Celsus";
 const char txt_f_fh[] PROGMEM = "Fahrenheit";
 const char txt_f_allmodes[] PROGMEM = "Clim réversible";
 const char txt_f_noheat[] PROGMEM = "Uniquement climatiseur";
@@ -71,11 +71,13 @@ const char txt_mqtt_topic[] PROGMEM = "Topic";
 const char txt_others_title[] PROGMEM = "Autres Paramétres";
 const char txt_others_haauto[] PROGMEM = "HA Découverte automatique";
 const char txt_others_hatopic[] PROGMEM = "HA Topic Découverte automatique";
-const char txt_others_debug[] PROGMEM = "Debug";
+const char txt_others_debug_packets[] PROGMEM = "MQTT topic debug packets";
+const char txt_others_debug_log[] PROGMEM = "MQTT topic debug logs";
 
 //Page Status
 const char txt_status_title[] PROGMEM = "Etats";
 const char txt_status_hvac[] PROGMEM = "Etat HVAC";
+const char txt_retries_hvac[] PROGMEM = "HVAC Connection Retries";
 const char txt_status_mqtt[] PROGMEM = "Etat MQTT";
 const char txt_status_wifi[] PROGMEM = "WIFI RSSI";
 const char txt_status_connect[] PROGMEM = "CONNECTE";
@@ -110,12 +112,12 @@ const char txt_unit_password[] PROGMEM = "Mot de passe web";
 //Page Login
 const char txt_login_title[] PROGMEM = "Authentification";
 const char txt_login_password[] PROGMEM = "Mot de passe";
-const char txt_login_sucess[] PROGMEM = "Authentifcation réussit, vous allez être redirigé dans quelques secondes.";
+const char txt_login_sucess[] PROGMEM = "Authentifcation réussie, vous allez être redirigé dans quelques secondes.";
 const char txt_login_fail[] PROGMEM = "Mauvais mot de passe! Essayer à nouveau.";
 
 //Page Upgrade
 const char txt_upgrade_title[] PROGMEM = "Mise à jour";
-const char txt_upgrade_info[] PROGMEM = "Mise à jour par envoie d'un fichier bin";
+const char txt_upgrade_info[] PROGMEM = "Mise à jour par envoi d'un fichier bin";
 const char txt_upgrade_start[] PROGMEM = "Mise à jour lancée";
 
 //Page Upload
@@ -123,12 +125,12 @@ const char txt_upload_nofile[] PROGMEM = "Pas de fichier sélectionné";
 const char txt_upload_filetoolarge[] PROGMEM = "Fichier plus gros que l'espace disponible";
 const char txt_upload_fileheader[] PROGMEM = "Entếte magique du fichier de commence pas par 0xE9";
 const char txt_upload_flashsize[] PROGMEM = "La taille de la flash du fichier est plus large que la flash de l'équipement";
-const char txt_upload_buffer[] PROGMEM = "Erreur de comparaison du tampon d'envoi' du fichier";
+const char txt_upload_buffer[] PROGMEM = "Erreur de comparaison du tampon d'envoi du fichier";
 const char txt_upload_failed[] PROGMEM = "Erreur d'envoie. Activer les logs option 3 pour plus d'information";
 const char txt_upload_aborted[] PROGMEM = "Envoie annulé";
 const char txt_upload_code[] PROGMEM = "Code d'erreur d'envoi ";
-const char txt_upload_error[] PROGMEM = "Code d'érreur de mise à jour ( voir Updater.cpp) ";
-const char txt_upload_sucess[] PROGMEM = "Réussit.";
+const char txt_upload_error[] PROGMEM = "Code d'erreur de mise à jour ( voir Updater.cpp) ";
+const char txt_upload_sucess[] PROGMEM = "Réussi.";
 const char txt_upload_refresh[] PROGMEM = "Rafaichissement dans ";
 
 //Page Init

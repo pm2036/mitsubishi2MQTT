@@ -1,6 +1,6 @@
 /*
   mitsubishi2mqtt - Mitsubishi Heat Pump to MQTT control for Home Assistant.
-  Copyright (c) 2019 gysmo38, dzungpv, shampeon, endeavour, jascdk, chrdavis, alekslyse.  All right reserved.
+  Copyright (c) 2022 gysmo38, dzungpv, shampeon, endeavour, jascdk, chrdavis, alekslyse.  All right reserved.
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
@@ -72,11 +72,13 @@ const char txt_mqtt_topic[] PROGMEM = "Topic";
 const char txt_others_title[] PROGMEM = "Otros parámetros";
 const char txt_others_haauto[] PROGMEM = "HA Autodiscovery";
 const char txt_others_hatopic[] PROGMEM = "HA Autodiscovery topic";
-const char txt_others_debug[] PROGMEM = "Debug";
+const char txt_others_debug_packets[] PROGMEM = "MQTT topic debug packets";
+const char txt_others_debug_log[] PROGMEM = "MQTT topic debug logs";
 
 //Page Status
 const char txt_status_title[] PROGMEM = "Estado";
 const char txt_status_hvac[] PROGMEM = "Estado HVAC";
+const char txt_retries_hvac[] PROGMEM = "HVAC Connection Retries";
 const char txt_status_mqtt[] PROGMEM = "Estado MQTT";
 const char txt_status_wifi[] PROGMEM = "WIFI RSSI";
 const char txt_status_connect[] PROGMEM = "CONNECTADO";
@@ -112,7 +114,7 @@ const char txt_unit_password[] PROGMEM = "Contraseña interfaz";
 const char txt_login_title[] PROGMEM = "Autentificación";
 const char txt_login_password[] PROGMEM = "Contraseña";
 const char txt_login_sucess[] PROGMEM = "Autentificación correcta, en pocos segundos serás redirigido.";
-const char txt_login_fail[] PROGMEM = "¡Usuario contraseña invalidos! Intealo de nuevo.";
+const char txt_login_fail[] PROGMEM = "¡Usuario contraseña invalidos! Intentalo de nuevo.";
 
 //Page Upgrade
 const char txt_upgrade_title[] PROGMEM = "Actualización";
@@ -130,10 +132,10 @@ const char txt_upload_aborted[] PROGMEM = "Subida abortada";
 const char txt_upload_code[] PROGMEM = "Código de error de subida";
 const char txt_upload_error[] PROGMEM = "Código de error de subida (mirar en Updater.cpp) ";
 const char txt_upload_sucess[] PROGMEM = "Satisfactorio";
-const char txt_upload_refresh[] PROGMEM = "Refescando en in";
+const char txt_upload_refresh[] PROGMEM = "Refescando en ";
 
 
 //Page Init
 const char txt_init_title[] PROGMEM = "Configuración inicial";
-const char txt_init_reboot_mes[] PROGMEM = "Reiniciando y conectando a su red WiFi! Debería ver el equipo lo en su punto de acceso.";
+const char txt_init_reboot_mes[] PROGMEM = "Reiniciando y conectando a su red WiFi! Debería ver el equipo en su punto de acceso.";
 const char txt_init_reboot[] PROGMEM = "Reiniciando...";

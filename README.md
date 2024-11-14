@@ -1,23 +1,21 @@
 # mitsubishi2MQTT
 Use MQTT and ESP8266/ESP32 module to control Mitsubishi HVAC unit.
-It use SwiCago librairies: https://github.com/SwiCago/HeatPump
+It use SwiCago libraries: https://github.com/SwiCago/HeatPump
 
 ***
 Features:
  - Initial config:  WIFI AP mode and web portal
  - Web interface for configuration, status and control, firmware upgrade
  - Homeassistant autodiscovery and control with MQTT
+ - Control with MQTT
+ - Multilanguages
 
-***
 Screenshots:
 
-Main Page
-![](https://github.com/gysmo38/mitsubishi2MQTT/blob/master/images/main_page.png)
+![Main page](https://github.com/gysmo38/mitsubishi2MQTT/blob/master/images/main_page.png)
 
-Control page
 ![](https://github.com/gysmo38/mitsubishi2MQTT/blob/master/images/control_page.png)
 
-Config page
 ![](https://github.com/gysmo38/mitsubishi2MQTT/blob/master/images/config_page.png)
 
 ***
@@ -30,6 +28,8 @@ How to use:
  - Step 6: (optional): Set MQTT information for use with Home Assistant
  - Step 7: (optional): Set Login password to prevent unwanted access in SETUP->ADVANCE->Login Password
 
+Nightly builds are available for select platforms via GitHub Actions. Go to [the platformio workflow](https://github.com/gysmo38/mitsubishi2MQTT/actions/workflows/platformio.yml), select the latest build, then check the **Artifacts** section. 
+
 ***
 For nodered fans MQTT topic use cases
 - topic/power/set OFF
@@ -41,6 +41,28 @@ For nodered fans MQTT topic use cases
 - topic/wideVane/set << < | > >>
 - topic/settings
 - topic/state
-- topic/debug
-- topic/debug/set on off
+- topic/debug/packets
+- topic/debug/packets/set on off
+- topic/debug/logs
+- topic/debug/logs/set on off
 - topic/custom/send as example "fc 42 01 30 10 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7b " see https://github.com/SwiCago/HeatPump/blob/master/src/HeatPump.h
+- topic/system/set reboot 
+***
+# Grafana dashboard
+To use Grafana you need to have Prometheus and Grafana (v10 or newer) installed.
+Config for Prometheus:
+```  - job_name: Mitsubishi2mqtt
+    static_configs:
+        - targets:
+            - IP-TO-Mitsubishi2mqtt
+```
+Then add Prometheus as a datasource in Grafana
+Grafana -> Connections -> Add new connection -> Prometheus -> ```Prometheus server URL: PROMETHEUS-IP:PORT```
+
+Then you can import the dashboard in Grafana -> Dashboards -> New -> Import and upload the file https://github.com/gysmo38/mitsubishi2MQTT/blob/master/Mitsubishi2mqtt.json
+
+![](https://github.com/gysmo38/mitsubishi2MQTT/blob/master/images/Grafana-screenshot.png)
+
+If you like my work and use it ;)<br>
+
+<a href='https://ko-fi.com/L3L0GSF7X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
